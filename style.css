@@ -157,7 +157,6 @@ video#bg-video {
   height: 200px;
   background-size: cover;
   border-radius: 50%;
-  margin: 10px 0;
   z-index: 0;
   opacity: 0.1;
 }
