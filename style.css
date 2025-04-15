@@ -1,139 +1,16 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-}
-
 body, html {
   height: 100%;
+  margin: 0;
+  padding: 0;
   background: black;
-  overflow: hidden;
-  color: white;
-  cursor: url('cursor.svg'), auto;
 }
 
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
-
-.overlay {
-  width: 100%;
+video {
+  width: 100vw;
   height: 100vh;
-  background: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: opacity 1s ease;
-  z-index: 5;
-}
-
-#enter-text {
-  font-size: 1.5rem;
-  text-shadow: 0 0 10px white;
-  animation: pulse 1.6s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-
-.links {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  display: none;
-  max-width: 90%;
-  z-index: 4;
-}
-
-.links.visible {
-  display: flex;
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
-.link-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  max-width: 300px;
-  justify-content: center;
-  cursor: inherit;
-}
-
-.link-btn img {
-  height: 20px;
-  width: 20px;
-  filter: drop-shadow(0 0 4px white);
-}
-
-.link-btn:hover {
-  background: white;
-  color: black;
-}
-
-.info-card {
-  background: rgba(0,0,0,0.6);
-  padding: 20px 40px;
-  border-radius: 16px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.2);
-}
-
-.brand {
-  font-size: 1.6rem;
-  font-weight: bold;
-  text-shadow: 0 0 8px white;
-  animation: glitch 1.5s infinite;
-}
-
-@keyframes glitch {
-  0%, 100% { opacity: 1; transform: none; }
-  45% { opacity: 0.85; transform: translate(0.5px, -0.5px); }
-  55% { opacity: 1; transform: translate(-0.5px, 0.5px); }
-}
-
-.subtitle {
-  font-size: 0.8rem;
-  color: #ccc;
-  margin-top: 6px;
-}
-
-.subtitle a {
-  color: #ccc;
-  text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-  .brand { font-size: 1.2rem; }
-  .subtitle { font-size: 0.7rem; }
-  .link-btn { font-size: 0.9rem; padding: 10px 16px; }
-}
-
-.fade-out {
-  opacity: 0;
-  transition: opacity 1s ease;
+  border: 5px solid red !important;
+  background: blue !important;
+  z-index: 99999 !important;
+  display: block;
 }
