@@ -14,7 +14,16 @@ document.getElementById("overlay").addEventListener("click", () => {
   overlay.classList.add("fade-out");
   setTimeout(() => {
     overlay.style.display = "none";
-    panel.classList.remove("hidden");
     panel.classList.add("visible");
   }, 1000);
+});
+
+document.querySelectorAll(".link-btn").forEach(btn => {
+  btn.addEventListener("mouseenter", () => {
+    const hoverSound = document.getElementById("hover-sound");
+    if (hoverSound) {
+      hoverSound.currentTime = 0;
+      hoverSound.play();
+    }
+  });
 });
