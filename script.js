@@ -27,12 +27,3 @@ document.querySelectorAll(".link-btn").forEach(btn => {
     }
   });
 });
-
-document.addEventListener('visibilitychange', () => {
-  const video = document.getElementById("bg-video");
-  if (document.hidden) {
-    video.pause();
-  } else {
-    video.play();
-  }
-});
