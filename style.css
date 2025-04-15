@@ -1,16 +1,119 @@
 
 body, html {
-  height: 100%;
   margin: 0;
   padding: 0;
-  background: black;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
 }
 
-video {
+video#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  border: 5px solid red !important;
-  background: blue !important;
-  z-index: 99999 !important;
-  display: block;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity 1s ease;
+}
+
+.overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#enter-text {
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 0 0 10px white;
+}
+
+.links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  position: relative;
+  top: 80px;
+}
+
+.links.visible {
+  display: flex;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.link-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  margin: 8px;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.link-btn:hover {
+  background: rgba(255,255,255,0.1);
+  transform: scale(1.05);
+  cursor: url('cursor.svg'), auto;
+}
+
+.link-btn img {
+  height: 20px;
+  width: 20px;
+  filter: invert(1);
+}
+
+.info-card {
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  padding: 16px 28px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  text-align: center;
+}
+
+.brand {
+  color: white;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-shadow: 0 0 10px white;
+}
+
+.subtitle {
+  color: white;
+  font-size: 0.8em;
+  margin-top: 8px;
+}
+
+.subtitle a {
+  color: white;
+  text-decoration: underline;
 }
