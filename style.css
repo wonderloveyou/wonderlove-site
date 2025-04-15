@@ -22,7 +22,7 @@ body, html {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
 }
 
 .overlay {
@@ -61,6 +61,8 @@ body, html {
   z-index: 2;
   opacity: 0;
   transition: opacity 1s ease;
+  max-width: 90%;
+  text-align: center;
 }
 
 .links.visible {
@@ -75,6 +77,8 @@ body, html {
   text-decoration: none;
   border-radius: 8px;
   transition: background 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  max-width: 300px;
 }
 
 .link-btn:hover {
@@ -85,4 +89,51 @@ body, html {
 
 .hidden {
   display: none;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.info-card {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  margin-bottom: 24px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px white;
+  color: white;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  #enter-text {
+    font-size: 1.2rem;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  .link-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .info-card {
+    padding: 16px 24px;
+  }
 }

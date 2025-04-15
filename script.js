@@ -2,7 +2,8 @@
 document.getElementById("overlay").addEventListener("click", () => {
   const overlay = document.getElementById("overlay");
   const panel = document.getElementById("link-panel");
-  overlay.style.opacity = 0;
+
+  overlay.classList.add("fade-out");
   setTimeout(() => {
     overlay.style.display = "none";
     panel.classList.remove("hidden");
