@@ -64,19 +64,29 @@ video#bg-video {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.link_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8px;
+  column-gap: 8px;
+}
+
 .link-btn {
-  background: transparent;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
   border: 1px solid white;
   color: white;
   text-decoration: none;
-  padding: 12px 18px;
-  margin: 8px;
   font-weight: bold;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: background 0.3s, transform 0.2s;
+  border-radius: 15px;
+  margin: 8px;
+  padding: 12px 18px;
+  width: 170px;
+  transition: transform 0.2s;
+  font-size: 20px;
 }
 
 .link-btn:hover {
@@ -86,7 +96,9 @@ video#bg-video {
 }
 
 .link-btn img {
-  height: 20px;
+  display: flex;
+  justify-content: center;
+  padding-right: 5px;
   width: 20px;
   filter: invert(1);
 }
@@ -95,7 +107,7 @@ video#bg-video {
   background: rgba(0,0,0,0.4);
   backdrop-filter: blur(10px);
   padding: 16px 28px;
-  border-radius: 16px;
+  border-radius: 35px;
   margin-bottom: 20px;
   box-shadow: 0 0 20px rgba(255,255,255,0.2);
   text-align: center;
@@ -103,9 +115,10 @@ video#bg-video {
 
 .brand {
   color: white;
-  font-size: 1.6em;
+  font-size: 2em;
   font-weight: bold;
   text-shadow: 0 0 10px white;
+  margin: 12px;
 }
 
 .subtitle {
@@ -119,7 +132,6 @@ video#bg-video {
   text-decoration: underline;
 }
 
-
 .video-overlay {
   position: fixed;
   top: 0;
@@ -129,4 +141,23 @@ video#bg-video {
   background: rgba(0, 0, 0, 0.6);
   z-index: 0;
   pointer-events: none;
+}
+
+.image-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.anm-photo {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 10px 0;
+  z-index: 0;
+  opacity: 0.1;
 }

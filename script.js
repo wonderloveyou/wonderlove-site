@@ -1,10 +1,8 @@
-
 document.getElementById("overlay").addEventListener("click", () => {
   const overlay = document.getElementById("overlay");
   const panel = document.getElementById("link-panel");
   const video = document.getElementById("bg-video");
   const clickSound = document.getElementById("click-sound");
-
   if (clickSound) clickSound.play();
   if (video) {
     video.muted = false;
