@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <audio id="click-sound" src="click.mp3" preload="auto"></audio>
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="bg.mp4" type="video/mp4" />
+  <video id="bg-video" playsinline loop>
+    <source src="bg.webm" type="video/webm" />
   </video>
+
+  <audio id="click-sound" src="click.mp3" preload="auto"></audio>
 
   <div class="overlay" id="overlay">
     <p id="enter-text">click to enter...</p>
@@ -20,13 +21,17 @@
   <div class="links hidden" id="link-panel">
     <div class="info-card">
       <p class="brand">ВАНДЕР</p>
-      <p class="subtitle">FOUNDER @SVXMUSIC | HEAD OF CONTENT PIPER.MY | COMMUNITY MANAGER <a href="https://artgeneration.co" target="_blank">ARTGENERATION.CO</a></p>
+      <p class="subtitle">
+        <a href="https://t.me/svxmusic" target="_blank">FOUNDER @SVXMUSIC</a> |
+        <a href="https://PIPER.MY" target="_blank">HEAD OF CONTENT PIPER.MY</a> |
+        COMMUNITY MANAGER <a href="https://artgeneration.co" target="_blank">ARTGENERATION.CO</a>
+      </p>
     </div>
-    <a href="https://t.me/wonderloveyou" target="_blank" class="link-btn">Telegram</a>
-    <a href="https://www.youtube.com/@wdrlv" target="_blank" class="link-btn">YouTube</a>
-    <a href="https://www.notion.so/1ccb02477dec80699ad3e79a49bcf3fc?pvs=4" target="_blank" class="link-btn">Notion</a>
-    <a href="https://band.link/1Yczh" target="_blank" class="link-btn">Band.link</a>
-    <a href="https://www.twitch.tv/wonderluverz" target="_blank" class="link-btn">Twitch</a>
+    <a href="https://t.me/wonderloveyou" target="_blank" class="link-btn"><img src="icons/telegram.svg" alt=""> Telegram</a>
+    <a href="https://www.youtube.com/@wdrlv" target="_blank" class="link-btn"><img src="icons/youtube.svg" alt=""> YouTube</a>
+    <a href="https://www.notion.so/1ccb02477dec80699ad3e79a49bcf3fc?pvs=4" target="_blank" class="link-btn"><img src="icons/notion.svg" alt=""> Notion</a>
+    <a href="https://band.link/1Yczh" target="_blank" class="link-btn"><img src="icons/link.svg" alt=""> Band.link</a>
+    <a href="https://www.twitch.tv/wonderluverz" target="_blank" class="link-btn"><img src="icons/twitch.svg" alt=""> Twitch</a>
   </div>
 
   <script src="script.js"></script>
