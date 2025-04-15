@@ -8,10 +8,11 @@
   font-family: 'Inter', sans-serif;
 }
 
-body, html {
+html, body {
   height: 100%;
   background: black;
   color: white;
+  cursor: url('cursor.svg'), auto;
   overflow: hidden;
 }
 
@@ -114,25 +115,30 @@ body, html {
   color: white;
 }
 
+.subtitle {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 6px;
+}
+
+.subtitle a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
 @keyframes fadeIn {
   0% { opacity: 0; transform: scale(0.9); }
   100% { opacity: 1; transform: scale(1); }
 }
 
 @media (max-width: 600px) {
-  #enter-text {
-    font-size: 1.2rem;
-  }
-
-  .brand {
-    font-size: 1.2rem;
-  }
-
+  #enter-text { font-size: 1.2rem; }
+  .brand { font-size: 1.2rem; }
+  .subtitle { font-size: 0.7rem; }
   .link-btn {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
-
   .info-card {
     padding: 16px 24px;
   }
