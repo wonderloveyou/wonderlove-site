@@ -1,3 +1,4 @@
+
 body, html {
   cursor: url('cursor.svg'), auto;
   margin: 0;
@@ -5,53 +6,42 @@ body, html {
   height: 100%;
   font-family: 'Arial', sans-serif;
   overflow: hidden;
-  background: #000;
 }
 
-#loader {
+video#bg-video {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.loader-spinner {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0 0 15px white;
-  background: conic-gradient(from 0deg, white 10%, transparent 10% 100%);
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-#bg-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  object-fit: cover;
   z-index: -1;
 }
 
-.video-overlay {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity 1s ease;
+}
+
+.overlay.fade-out {
+  opacity: 0;
   pointer-events: none;
+}
+
+#enter-text {
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 0 0 10px white;
 }
 
 .links {
@@ -84,10 +74,8 @@ body, html {
 }
 
 .link-btn {
-  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: transparent;
   border: 1px solid white;
   color: white;
@@ -97,36 +85,19 @@ body, html {
   margin: 8px;
   padding: 12px 18px;
   width: 170px;
-  font-size: 20px;
-  overflow: hidden;
   transition: transform 0.2s;
+  font-size: 20px;
 }
 
 .link-btn:hover {
+  background: rgba(255,255,255,0.1);
   transform: scale(1.05);
   cursor: url('cursor.svg'), auto;
 }
 
-.link-btn .glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 80%);
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  filter: blur(15px);
-  pointer-events: none;
-}
-
-.link-btn:hover .glow {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
-
 .link-btn img {
+  display: flex;
+  justify-content: center;
   padding-right: 5px;
   width: 20px;
   filter: invert(1);
@@ -142,28 +113,11 @@ body, html {
   text-align: center;
 }
 
-.brand-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-#particles-vander {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
 .brand {
   color: white;
   font-size: 2em;
   font-weight: bold;
   text-shadow: 0 0 10px white;
-  position: relative;
-  z-index: 1;
   margin: 12px;
 }
 
@@ -178,10 +132,31 @@ body, html {
   text-decoration: underline;
 }
 
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  pointer-events: none;
+}
+
 .image-photo {
   width: 200px;
   height: 200px;
   border-radius: 100%;
   object-fit: cover;
   z-index: 1;
+}
+
+.anm-photo {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.1;
 }
