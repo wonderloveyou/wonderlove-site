@@ -5,22 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ВАНДЕР</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-  <video id="bg-video" autoplay muted loop playsinline>
-    <source src="bg.mp4" type="video/mp4" />
-  </video>
+  <!-- LOADER -->
+  <div id="loader">
+    <span class="loader-spinner"></span>
+  </div>
+
+  <!-- BACKGROUND CANVAS -->
+  <canvas id="bg-canvas"></canvas>
   <div class="video-overlay"></div>
+
   <audio id="click-sound" src="click.mp3" preload="auto"></audio>
   <audio id="hover-sound" src="hover.mp3" preload="auto"></audio>
-  <div class="overlay" id="overlay">
-    <p id="enter-text">click to enter...</p>
-  </div>
 
   <div class="links" id="link-panel">
     <div class="info-card">
-      <p class="brand">ВАНДЕР</p>
-      <img src="undefined - Imgur.gif" class="anm-photo">
+      <div class="brand-wrapper">
+        <div id="particles-vander"></div>
+        <p class="brand">ВАНДЕР</p>
+      </div>
       <img src="vander photo.jpeg" class="image-photo">
       <p class="subtitle">
         FOUNDER @<a href="https://t.me/svxmusic" target="_blank">SVXMUSIC</a> |
@@ -29,13 +34,14 @@
       </p>
     </div>
     <div class="link_container">
-    <a href="https://t.me/wonderloveyou" target="_blank" class="link-btn"><img src="icons/telegram.svg" alt=""> Telegram</a>
-    <a href="https://www.youtube.com/@wdrlv" target="_blank" class="link-btn"><img src="icons/youtube.svg" alt=""> YouTube</a>
-    <a href="https://www.notion.so/1ccb02477dec80699ad3e79a49bcf3fc?pvs=4" target="_blank" class="link-btn"><img src="icons/notion.svg" alt=""> Notion</a>
-    <a href="https://band.link/1Yczh" target="_blank" class="link-btn"><img src="icons/link.svg" alt=""> Band.link</a>
-    <a href="https://www.twitch.tv/wonderluverz" target="_blank" class="link-btn"><img src="icons/twitch.svg" alt=""> Twitch</a>
+      <a href="https://t.me/wonderloveyou" target="_blank" class="link-btn"><span class="glow"></span><img src="icons/telegram.svg"> Telegram</a>
+      <a href="https://www.youtube.com/@wdrlv" target="_blank" class="link-btn"><span class="glow"></span><img src="icons/youtube.svg"> YouTube</a>
+      <a href="https://www.notion.so/1ccb02477dec80699ad3e79a49bcf3fc?pvs=4" target="_blank" class="link-btn"><span class="glow"></span><img src="icons/notion.svg"> Notion</a>
+      <a href="https://band.link/1Yczh" target="_blank" class="link-btn"><span class="glow"></span><img src="icons/link.svg"> Band.link</a>
+      <a href="https://www.twitch.tv/wonderluverz" target="_blank" class="link-btn"><span class="glow"></span><img src="icons/twitch.svg"> Twitch</a>
+    </div>
   </div>
-  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
